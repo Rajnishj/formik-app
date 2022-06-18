@@ -1,0 +1,13 @@
+<!-- @format -->
+
+Context Api is a part of react which is used to manage yhe state state. To overcome the problem of props drilling we use redux.
+
+What is Props Drilling?
+Props drilling means passing the data from parent component to the nested child components.
+suppose we have nested component A , B , C , D, E , F and we have to pass
+the data from parent component A to the nested child component F.Without state management library we first pass the data to B then to C then to D then to E and finally to F
+
+Can we pass the data from child component to parent component?
+Yes , we can pass as a callback function but I have not done that yet.I know the concept but I have not utilize that yet.
+
+To solve the props drilling issue we use context api to manage our state.

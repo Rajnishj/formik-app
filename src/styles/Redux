@@ -1,0 +1,34 @@
+<!-- @format -->
+
+Redux is a state management library. To overcome the problem of props drilling we use redux.
+
+What is Props Drilling?
+Props drilling means passing the data from parent component to the nested child components.
+suppose we have nested component A , B , C , D, E , F and we have to pass
+the data from parent component A to the nested child component F.Without state management library we first pass the data to B then to C then to D then to E and finally to F
+
+Can we pass the data from child component to parent component?
+Yes , we can pass as a callback function but I have not done that yet.I know the concept but I have not utilize that yet.
+
+To solve the props drilling issue we use redux to manage our state.
+
+1. At first we create type file where we write all our types
+2. then we create action file where we write all our function with types and payload
+3. then that will go to the reducer file where we write our initialState and the switch cases for that
+4. then we create combine reducer or rootReducer file At first we import combineReducer from "redux"
+   then we will write all our reducer
+5. After that we create store At first we import createStore from "redux".then we pass all our rootReducer ,middleware , composeWithDevTools in createStore
+
+Why we use middleware in redux?
+To convert the asynchronous function to synchronous function.suppose when we are fetching the data from the server and if we dont use middleware then it will through error that we have to use middleware like thunk or saga.
+
+So which middleware you are using?
+I have used only thunk and I don't have any idea about saga
+
+What is the use of Devtool extension?
+It is use as debugging purpose
+
+6. Then we go to the index file and import Provider from "react-redux" and wrap the app file with
+   Provider and pass the store inside it.
+
+And finally to access the state we use useSelector hooks and to access the function we use useDispatch hooks from "react-redux"
